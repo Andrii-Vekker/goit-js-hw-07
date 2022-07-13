@@ -115,7 +115,7 @@ function galleryHandler(e) {
   })
     },
     onClose: (e) => {
-      if (!instance.visible()) {
+      if (instance.visible()) {
         removeEventListener("keydown", instance.onShow);
       }
  
