@@ -52,7 +52,7 @@ galleryRef.addEventListener("click", galleryHandler)
 //   instance.show();
 // };
 
-//////////////////////////////////////////////////right//////////////////////////////////////////
+////////////////////////////////////////////////right//////////////////////////////////////////
 let instance = null
 function createMurkup(items) {
   const markup = items.map(item =>
@@ -98,6 +98,12 @@ function closeEsc(e) {
 
 /////////////////////////////////////////////////////
 
+ 
+  // const instance = basicLightbox.create(`<button type="button" class="button" data-slide="prev" style="transform: translateY(-300px)">prev</button>
+  //   <img src="${largeRef}" width="800" height="600"> <button type="button" class="button" data-slide="next" style="transform: translateY(-300px)">next</button>`)
+
+
+// let instance = null
 // function createMurkup(items) {
 //   const markup = items.map(item =>
 // `<div class="gallery__item">
@@ -118,34 +124,25 @@ function closeEsc(e) {
 //   return galleryRef.insertAdjacentHTML("beforeend", string);
 // }
 // insertList(createMurkup(galleryItems));
-
 // function galleryHandler(e) {
 //   e.preventDefault();
 //     if (e.target.nodeName !== "IMG") {
 //     return
 //   };
- 
+  
 //   const largeRef = e.target.dataset.source;
-//   const instance = basicLightbox.create(`<button type="button" class="button" data-slide="prev" style="transform: translateY(-300px)">prev</button>
+//     instance =  basicLightbox.create(`<button type="button" class="button" data-slide="prev" style="transform: translateY(-300px)">prev</button>
 //     <img src="${largeRef}" width="800" height="600"> <button type="button" class="button" data-slide="next" style="transform: translateY(-300px)">next</button>`, {
-//           onShow: () => {
-//         addEventListener("keydown", (e) => {
-//           if (e.key === "Escape") {
-//             instance.close()
-//           }
-//         });
-//         console.log()
-//     },
-//     onClose: (e) => {
-//       if (instance.visible()) {
-//         removeEventListener("keydown", instance.onShow);
-//       };
-//       const button = document.querySelector(".button");
-//       button.addEventListener("click", (e) => console.log(e.target))
-//       console.log(button);
+//     onShow: () => addEventListener("keydown", closeEsc),
+//       onClose: () => removeEventListener("keydown", closeEsc),
 //     }
-//   }
-//   );
+    
+//     );
 //   instance.show();
 // };
- 
+
+// function closeEsc(e) {
+//   if (e.code === "Escape") {
+//     instance.close()
+//   }
+// }
